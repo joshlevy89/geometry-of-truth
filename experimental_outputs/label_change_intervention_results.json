@@ -1,1 +1,455 @@
-[]
+[
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "diff": [
+                -0.9215961217150007,
+                -0.8944014880689792,
+                -0.8278815532314845,
+                -0.7424109784928574,
+                -0.6802017615409568,
+                -0.6450133258688517,
+                -0.6240326899781146,
+                -0.6123999426437711,
+                -0.6063952163306319,
+                -0.6037037399470467,
+                -0.6034554761559279,
+                -0.6040277570507235
+            ],
+            "tot": [
+                0.9948286972992885,
+                0.9944345530238934,
+                0.9935519489332695,
+                0.9925215962046589,
+                0.9917144720040431,
+                0.991220812630755,
+                0.9908421179703013,
+                0.9904077285265719,
+                0.9901639644628052,
+                0.9900623932692476,
+                0.9900259131417525,
+                0.9900195343229412
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                -0.8944014880689792
+            ],
+            "tot": [
+                0.9944345530238934
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                0.6390811919390811
+            ],
+            "tot": [
+                0.9957734252073173
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                0.6390811919390811
+            ],
+            "tot": [
+                0.9957734252073173
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                0.7404264082023174
+            ],
+            "tot": [
+                0.9962679401384613
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                -0.9215961217150007
+            ],
+            "tot": [
+                0.9948286972992885
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                0.5633080338553197
+            ],
+            "tot": [
+                0.9949421784006103
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                0.5633080338553197
+            ],
+            "tot": [
+                0.9949421784006103
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                4
+            ],
+            "diff": [
+                -0.7887002124391884
+            ],
+            "tot": [
+                0.9951244036457098
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                -0.45932743533260445
+            ],
+            "tot": [
+                0.9937816082330589
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                6
+            ],
+            "diff": [
+                -0.8270464641811875
+            ],
+            "tot": [
+                0.994423983866252
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                4
+            ],
+            "diff": [
+                -0.45932743533260445
+            ],
+            "tot": [
+                0.9937816082330589
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 10,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                4
+            ],
+            "diff": [
+                0.25485525881363585
+            ],
+            "tot": [
+                0.9912961847572164
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 13,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                -0.77720398944668
+            ],
+            "tot": [
+                0.9943317268582094
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 13,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                0.5633080338553197
+            ],
+            "tot": [
+                0.9949421784006103
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 13,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                0.5633080338553197
+            ],
+            "tot": [
+                0.9949421784006103
+            ]
+        },
+        "experiment": "true to false"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 13,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                -0.45932743533260445
+            ],
+            "tot": [
+                0.9937816082330589
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 13,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                1
+            ],
+            "diff": [
+                0.21911917338994416
+            ],
+            "tot": [
+                0.9894576257264073
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 13,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                -0.45932743533260445
+            ],
+            "tot": [
+                0.9937816082330589
+            ]
+        },
+        "experiment": "false to true"
+    },
+    {
+        "train_datasets": [
+            "cities"
+        ],
+        "val_dataset": "sp_en_trans",
+        "layer": 14,
+        "probe class": "MMProbe",
+        "prompt": "The Spanish word 'jirafa' means 'giraffe'. This statement is: TRUE\nThe Spanish word 'escribir' means 'to write'. This statement is: TRUE\nThe Spanish word 'diccionario' means 'dictionary'. This statement is: TRUE\nThe Spanish word 'gato' means 'cat'. This statement is: TRUE\nThe Spanish word 'aire' means 'silver'. This statement is: FALSE",
+        "results": {
+            "alpha": [
+                0
+            ],
+            "diff": [
+                -0.9215961217150007
+            ],
+            "tot": [
+                0.9948286972992885
+            ]
+        },
+        "experiment": "false to true"
+    }
+]

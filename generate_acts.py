@@ -23,12 +23,13 @@ class Hook:
 
 def load_llama(model_size, device):
     llama_path = os.path.join(LLAMA_DIRECTORY, config['LLaMA'][f'{model_size}_subdir'])
-    tokenizer = LlamaTokenizer.from_pretrained(llama_path)
-    model = LlamaForCausalLM.from_pretrained(llama_path)
+    print(llama_path)
+    tokenizer = LlamaTokenizer.from_pretrained(llama_path, device_map='cuda')
+    model = LlamaForCausalLM.from_pretrained(llama_path, device_map='cuda')
     # set tokenizer to use bos token
     tokenizer.bos_token = '<s>'
-    if model_size == '13B' and device != 'cpu':
-        model = model.half()
+    # if model_size == '13B' and device != 'cpu':
+    #     model = model.half()
     model.to(device)
     return tokenizer, model
 

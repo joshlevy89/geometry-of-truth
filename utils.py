@@ -52,6 +52,14 @@ def collect_acts(dataset_name, model_size, layer, center=True, scale=False, devi
     activation_files = glob(os.path.join(directory, f'layer_{layer}_*.pt'))
     acts = [t.load(os.path.join(directory, f'layer_{layer}_{i}.pt')).to(device) for i in range(0, ACTS_BATCH_SIZE * len(activation_files), ACTS_BATCH_SIZE)]
     acts = t.cat(acts, dim=0).to(device)
+    # if center:
+    #     acts = acts - t.mean(acts, dim=0)
+    # if scale:
+    #     acts = acts / t.std(acts, dim=0)
+    acts = transform_acts(acts, center, scale)
+    return acts
+
+def transform_acts(acts, center=True, scale=False):
     if center:
         acts = acts - t.mean(acts, dim=0)
     if scale:
@@ -93,7 +101,15 @@ class DataManager:
         acts = collect_acts(dataset_name, model_size, layer, center=center, scale=scale, device=device)
         df = pd.read_csv(os.path.join(ROOT, 'datasets', f'{dataset_name}.csv'))
         labels = t.Tensor(df[label].values).to(device)
-
+        self._split_data(acts, len(df), labels, dataset_name, split, seed)
+        
+    def add_fewshot_dataset(self, dfs, dataset_name, label='label', split=None, seed=None, center=True, scale=False, device='cpu'):
+        df = dfs[dataset_name]
+        acts = transform_acts(t.stack(df['activation'].tolist(), dim=0), center=center, scale=scale).to(device)
+        labels = t.Tensor(df[label].values).to(device)
+        self._split_data(acts, len(df), labels, dataset_name, split, seed)
+        
+    def _split_data(self, acts, nrows, labels, dataset_name, split, seed):
         if split is None:
             self.data[dataset_name] = acts, labels
 
@@ -102,10 +118,11 @@ class DataManager:
             if seed is None:
                 seed = random.randint(0, 1000)
             t.manual_seed(seed)
-            train = t.randperm(len(df)) < int(split * len(df))
+            train = t.randperm(nrows) < int(split * nrows)
             val = ~train
             self.data['train'][dataset_name] = acts[train], labels[train]
             self.data['val'][dataset_name] = acts[val], labels[val]
+        
 
     def get(self, datasets):
         """
@@ -142,10 +159,10 @@ class DataManager:
         Sets the projection matrix for dimensionality reduction by doing pca on the specified datasets.
         datasets : can be 'all', 'train', 'val', a list of dataset names, or a single dataset name.
         """
-        acts, _ = self.get(datasets, proj=False)
+        acts, _ = self.get(datasets)
         self.proj = get_pcs(acts, k=k, offset=dim_offset)
 
-        self.data = dict_recurse(self.data, lambda x : (t.mm(x[0], self.proj), x[1]))
+        # self.data = dict_recurse(self.data, lambda x : (t.mm(x[0], self.proj), x[1]))
     
 
 

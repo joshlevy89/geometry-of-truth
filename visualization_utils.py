@@ -37,6 +37,27 @@ class TruthData:
         out.layer = layer
 
         return out
+    
+    def from_fewshot(fewshot_dfs, dataset_names, center=True, scale=False, device='cpu'):
+        from utils import transform_acts
+        dfs = []
+        for dataset_name in dataset_names:
+            df = fewshot_dfs[dataset_name].copy()
+            acts = transform_acts(t.stack(df['activation'].tolist(), dim=0), center=center, scale=scale)
+            df['activation'] = list(acts)
+
+            dfs.append(df)
+        
+        df = pd.concat(dfs, keys=dataset_names)
+        df = df.sample(frac=1)
+
+        out = TruthData(df)
+        # out.model_size = model_size
+        # out.layer = layer
+
+        return out
+        
+        
    
     # make a scatterplot of the data after dimensionality reduction
     # dimensions : number of dimensions to reduce to
@@ -60,6 +81,8 @@ class TruthData:
         acts = df['activation'].tolist()
         acts = t.stack(acts, dim=0).cuda()
         proj = t.mm(acts, pcs)
+        # import pdb
+        # pdb.set_trace()
 
         # add projected data to df
         for dim in range(dimensions):
